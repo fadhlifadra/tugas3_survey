@@ -165,7 +165,7 @@ public class QueryAddData extends HttpServlet {
             q.setParameter(1, n1);
             List r = q.getResultList();
             utx.commit();
-            out.println("Rata - rata gaji Departemen " + n1.toUpperCase() + " adalah " + r );
+            out.println("Data Tersimpan");
             } 
         catch (Exception e) {
             e.printStackTrace();
