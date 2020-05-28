@@ -41,10 +41,39 @@ public class QueryAddData extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        PrintWriter out = response.getWriter())
+        try {
             String n1 = "";
+            String n2 = "";
+            String n3 = "";
+            String n4 = "";
+            String n5 = "";
+            String n6 = "";
+            String n7 = "";
+            String n8 = "";
             if (request.getParameter("n1") != null) {
                 n1 = request.getParameter("n1");
+            }
+            if (request.getParameter("n2") != null) {
+                n2 = request.getParameter("n2");
+            }
+            if (request.getParameter("n3") != null) {
+                n3 = request.getParameter("n3");
+            }
+            if (request.getParameter("n4") != null) {
+                n4 = request.getParameter("n4");
+            }
+            if (request.getParameter("n5") != null) {
+                n5 = request.getParameter("n5");
+            }
+            if (request.getParameter("n6") != null) {
+                n6 = request.getParameter("n6");
+            }
+            if (request.getParameter("n7") != null) {
+                n7 = request.getParameter("n7");
+            }
+            if (request.getParameter("n8") != null) {
+                n8 = request.getParameter("n8");
             }
             /* TODO output your page here. You may use following sample code. */
             out.println("<html>");
@@ -87,47 +116,47 @@ public class QueryAddData extends HttpServlet {
             out.println("</nav>");
             
             out.println("<div class=\"container-fluid\">");
-            out.println("<form class=\"user\" method=\"post\" action=\"QueryAddData\" method=\"get\">");
+            out.println("<form class=\"user\" method=\"post\" action=\"QueryAddData\">");
             out.println("<div class=\"form-group\">");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Nama Lengkap :");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Nama Lengkap\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n1\" class=\"form-control bg-light border-0 small\" placeholder=\"Nama Lengkap\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("NIM :");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"NIM\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n2\" class=\"form-control bg-light border-0 small\" placeholder=\"NIM\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Angkatan :");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Angkatan\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n3\" class=\"form-control bg-light border-0 small\" placeholder=\"Angkatan\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Selama kuliah, mata kuliah apa yang paling Anda senangi?");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n4\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Selama kuliah, mata kuliah apa yang paling Anda tidak senangi?");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n5\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Selama kuliah, praktikum apa yang paling Anda senangi?");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n6\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Selama kuliah, praktikum apa yang paling Anda tidak senangi?");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n7\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             
             out.println("<div class=\"col-sm-6 mb-3 mb-sm-0\">");
             out.println("Apa konsentrasi atau Peminatan yang anda inginkan? (Software, Networking, Embedded, Multimedia)");
-            out.println("<input type=\"text\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
+            out.println("<input type=\"text\" name=\"n8\" class=\"form-control bg-light border-0 small\" placeholder=\"Jawab disini\" aria-label=\"Search\" aria-describedby=\"basic-addon2\">");
             out.println("</div><br>");
             out.println("</div>");
             
