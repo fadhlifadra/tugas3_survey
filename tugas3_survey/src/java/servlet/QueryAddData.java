@@ -24,7 +24,6 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Fadhli Hisyam
  */
-@PersistenceContext(name = "persistence/LogicalName", unitName = "tugas3_surveyPU")
 @WebServlet(name = "QueryAddData", urlPatterns = {"/QueryAddData"})
 public class QueryAddData extends HttpServlet {
 
