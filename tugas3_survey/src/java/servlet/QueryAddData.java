@@ -170,7 +170,7 @@ public class QueryAddData extends HttpServlet {
             Context ctx = (Context) new InitialContext().lookup("java:comp/env");
             utx.begin();
             EntityManager em = (EntityManager) ctx.lookup("persistence/LogicalName");
-            Query q = em.createNativeQuery("INSERT INTO data (nama, nim, angkatan, matkul_suka, matkul_taksuka, praktikum_suka, praktikum_taksuka, konseentrasi) VALUES(?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)");
+            Query q = em.createNativeQuery("INSERT INTO `survey_jpa`.`data` (`nama`, `nim`, `angkatan`, `matkul_suka`, `matkul_taksuka`, `praktikum_suka`, `praktikum_tidaksuka`, `konsentrasi`) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8);");
             q.setParameter(1, n1);
             q.setParameter(2, n2);
             q.setParameter(3, n3);
@@ -179,8 +179,9 @@ public class QueryAddData extends HttpServlet {
             q.setParameter(6, n6);
             q.setParameter(7, n7);
             q.setParameter(8, n8);
+            q.executeUpdate();
             
-            List r = q.getResultList();
+            //List r = q.getResultList();
             utx.commit();
             out.println("Data Tersimpan");
             } 
